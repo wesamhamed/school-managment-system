@@ -1,0 +1,68 @@
+<br />
+<div class="card">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-12">
+        <h4>Edit Teacher</h4>
+        <hr />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <form [formGroup]="editTeacherForm" (ngSubmit)="editTeacher()">
+          <div class="form-group row">
+            <label for="firstName" class="col-4 col-form-label">First Name</label>
+            <div class="col-8">
+              <input formControlName="firstName" id="firstName" name="firstName" placeholder="First Name"
+                class="form-control here" type="text" />
+              <div class="valid-feedback">Looks good!</div>
+
+              <div class="invalid-feedback">Please First Name is required.</div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="lastName" class="col-4 col-form-label">Last Name</label>
+            <div class="col-8">
+              <input formControlName="lastName" id="lastName" name="lastName" placeholder="Last Name"
+                class="form-control here" type="text" />
+              <div class="valid-feedback">Looks good!</div>
+
+              <div class="invalid-feedback">Please Last Name is required.</div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="dob" class="col-4 col-form-label">Data of Birth</label>
+            <div class="col-8">
+              <input formControlName="dob" id="dob" name="dob" placeholder="Data of Birth" class="form-control here"
+                type="date" />
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback">
+                Please Data of Birth is required.
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="mobile" class="col-4 col-form-label">Mobile</label>
+            <div class="col-8">
+              <input formControlName="mobile" id="mobile" name="mobile" placeholder="Mobile" class="form-control here"
+                type="number" />
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback">
+                Please Mobile is required.
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="offset-4 col-8">
+              <button name="submit" type="submit" class="btn btn-primary">
+                Save
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

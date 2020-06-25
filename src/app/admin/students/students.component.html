@@ -1,0 +1,53 @@
+<hr />
+<h1 style="display: inline-block;">Students</h1>
+<button type="button" class="btn btn-success float-right" routerLink="/admin/add-student">
+  Add Student
+</button>
+<hr />
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Data of Birth</th>
+      <th scope="col">Mobile</th>
+      <th scope="col">Stuats</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ahmad</td>
+      <td>Oday</td>
+      <td>1990/1/1</td>
+      <td>0123456789</td>
+      <td>Active</td>
+      <td>
+        <button class="btn btn-primary" routerLink="/admin/edit-student">Edit</button> |
+        <button class="btn btn-danger" (click)="deleteStudent()">Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>Ahmad</td>
+      <td>Oday</td>
+      <td>1990/1/1</td>
+      <td>0123456789</td>
+      <td>Active</td>
+      <td>
+        <button class="btn btn-primary">Edit</button> |
+        <button class="btn btn-danger">Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>Ahmad</td>
+      <td>Oday</td>
+      <td>1990/1/1</td>
+      <td>0123456789</td>
+      <td>Active</td>
+      <td>
+        <button class="btn btn-primary">Edit</button> |
+        <button class="btn btn-danger">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

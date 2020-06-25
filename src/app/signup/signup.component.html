@@ -1,0 +1,50 @@
+<form [formGroup]="signupForm" (ngSubmit)="signup()">
+  <fieldset>
+    <legend>Sign up</legend>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" name="email" formControlName="email" class="form-control" id="exampleInputEmail1"
+        placeholder="Enter email" />
+      <div class="alert alart-danger" *ngIf="signupForm.controls.email.touched && signupForm.controls.email.invalid">
+        <div *ngIf="signupForm.controls.email.errors.required">this is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputFirstName1">First Name</label>
+      <input name="firstname" formControlName="firstName" type="text" class="form-control" id="exampleInputFirstName1"
+        placeholder="Enter First Name" />
+      <div class="alert alart-danger"
+        *ngIf="signupForm.controls.firstName.touched && signupForm.controls.firstName.invalid">
+        <div *ngIf="signupForm.controls.firstName.errors.required">this is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputLastName1">Last Name</label>
+      <input name="lastname" formControlName="lastName" type="text" class="form-control" id="exampleInputLastName1"
+        placeholder="Enter Last Name" />
+      <div class="alert alart-danger"
+        *ngIf="signupForm.controls.lastName.touched && signupForm.controls.lastName.invalid">
+        <div *ngIf="signupForm.controls.lastName.errors.required">this is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input name="password" formControlName="password" type="password" class="form-control" id="exampleInputPassword1"
+        placeholder="Password" />
+      <div class="alert alart-danger"
+        *ngIf="signupForm.controls.password.touched && signupForm.controls.password.invalid">
+        <div *ngIf="signupForm.controls.password.errors.required">this is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputConfirmPassword1">Confirm Password</label>
+      <input name="confirmPassword" formControlName="confirmPassword" type="password" class="form-control"
+        id="exampleInputConfirmassword1" placeholder="Password" />
+      <div class="alert alart-danger"
+        *ngIf="signupForm.controls.confirmPassword.touched && signupForm.controls.confirmPassword.invalid">
+        <div *ngIf="signupForm.controls.confirmPassword.errors.required">this is required</div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Sign Up</button>
+  </fieldset>
+</form>
